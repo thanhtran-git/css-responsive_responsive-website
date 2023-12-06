@@ -21,8 +21,8 @@ the start of the introduction. */
 
   --gap: 20px;
 
-  --header-brand: 4rem;
-  --header-brand-line-height: 7rem;
+  --header-brand: 3rem;
+  --header-brand-line-height: 3rem;
 
   --header-text: 1.5rem;
   --header-text-line-height: 2rem;
@@ -242,12 +242,48 @@ fairly essential to completing this challenge. */
 CSS when certain conditions that we declare are met - such as a certain viewport 
 width, etc. */
 
-/* Media Query Tablet */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+@media (min-width: 900px) {
+  .card-section {
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .product-card,
+  .intro-text {
+    width: 45%;
+  }
+}
 
-/* Media Query Desktop */
-/* --- */
-/* Replace this comment with your media query. */
-/* --- */
+@media screen and (min-width: 1200px) {
+  .main-header,
+  .main-content,
+  .main-footer,
+  .navbar {
+    width: 60%;
+  }
+
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 20%;
+  }
+
+  .navbar {
+    position: fixed;
+    top: var(--header-height);
+    left: 20%;
+  }
+
+  .main-content {
+    margin: var(--main-content-margin-top) auto 0 auto;
+  }
+
+  .--forest {
+    width: 99%;
+  }
+
+  .main-footer {
+    margin: auto;
+  }
+}
